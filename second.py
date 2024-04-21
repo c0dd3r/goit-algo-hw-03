@@ -1,7 +1,7 @@
 import random
 
 def get_numbers_ticket(min, max, quantity):
-    if min < 1 or max > 1000 or quantity < min or quantity > max or quantity > (max - min + 1):
+    if min < 1 or max > 1000 or quantity > (max - min + 1):
         return []  
     
     unique_numbers = set()
@@ -14,5 +14,5 @@ def get_numbers_ticket(min, max, quantity):
     return sorted_numbers
 
 
-lottery_numbers = get_numbers_ticket(1, 49, 6)
+lottery_numbers = get_numbers_ticket(10, 20, 5)
 print("Ваші лотерейні числа:", lottery_numbers)
